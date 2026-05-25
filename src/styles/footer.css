@@ -27,30 +27,22 @@
 .social-icon {
   color: var(--text-main);
   display: inline-flex;
-  /* Smoothly transition both the transform position and the vector icon color fill together */
   transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), 
               color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Base structural transformation anchor */
 .social-icon:hover {
   transform: translateY(-0.125rem);
 }
 
-/* --- THE COLOR RECOVERY ENGINE --- */
-
-/* Behance Brand Blue Accent */
 .icon-behance:hover {
   color: #0057ff;
 }
 
-/* Dribbble Brand Premium Pink Accent */
 .icon-dribbble:hover {
   color: #ea4c89;
 }
 
-/* GitHub Brand Dark Indigo/Purple Accent */
 .icon-github:hover {
-  color: #24292e; /* Classic deep GitHub dark */
-  /* Alternative vibrant purple if you prefer: color: #6f42c1; */
+  color: #24292e;
 }

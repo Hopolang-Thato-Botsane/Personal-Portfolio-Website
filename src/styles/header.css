@@ -41,20 +41,15 @@
   color: var(--text-muted);
   font-size: 0.875rem;
   position: relative;
-  letter-spacing: 0em; /* Initial tracking bounds */
-  
-  /* Smoothly transition the tracking and text color together over 0.3s */
-  transition: color 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
-              letter-spacing 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  letter-spacing: 0em;
+  transition: color 0.3s cubic-bezier(0.25, 1, 0.5, 1), letter-spacing 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Clear, active focus lines */
 .nav-item:hover, 
 .nav-item.active { 
   color: var(--text-main); 
 }
 
-/* 20% Figma tracking expansion applied smoothly on mouse hover boundaries */
 .nav-item:hover {
   letter-spacing: 0.2em; 
 }
@@ -67,8 +62,6 @@
   width: 100%; 
   height: 0.0625rem; 
   background-color: var(--text-main);
-  
-  /* Ensures the active underline bar scales smoothly with the expanding letter widths */
   transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
