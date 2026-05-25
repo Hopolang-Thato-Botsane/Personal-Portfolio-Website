@@ -1,0 +1,28 @@
+.hero-section {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex; justify-content: center; align-items: center; text-align: center;
+  background-color: var(--bg-color); z-index: 10; padding: 0 2.5rem;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+.grid-line { position: absolute; width: 0.0625rem; background-color: rgba(0, 0, 0, 0.1); height: 100vh; top: 0; pointer-events: none; }
+.line-left { left: 33.333vw; }
+.line-right { left: 66.666vw; }
+
+.hero-text-block { max-width: 50rem; z-index: 15; }
+.hero-text-block h1 { font-size: 2.5rem; font-weight: 500; margin: 1rem 0; letter-spacing: -0.02em; }
+.subtitle { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.lead { font-size: 1.125rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 2rem; }
+
+.trigger-transition {
+  background: none; border: none; font-family: var(--font-sans);
+  font-size: 0.875rem; font-weight: 500; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+
+.arrow-icon { font-size: 0.625rem; transform: translateY(0); opacity: 0; transition: all 0.3s ease; }
+.trigger-transition:hover .arrow-icon { opacity: 1; transform: translateY(0.25rem); }
+
+/* Animation State */
+.site-wrapper.cases-state .hero-section { transform: translateY(-100vh); opacity: 0; }

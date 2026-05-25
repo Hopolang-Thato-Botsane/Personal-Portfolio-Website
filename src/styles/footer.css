@@ -1,0 +1,56 @@
+.site-footer {
+  display: flex; 
+  width: 100%; 
+  padding: 1rem 2.5rem;
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.1); 
+  align-items: center;
+  background-color: var(--bg-color); 
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 100;
+}
+
+.footer-col { flex: 1; display: flex; align-items: center; }
+.copyright { font-size: 0.875rem; color: var(--text-main); letter-spacing: -0.01em; }
+.social-profiles { display: flex; align-items: center; gap: 1.5rem; }
+.social-icon { color: var(--text-main); display: inline-flex; transition: all 0.2s ease; }
+.social-icon:hover { transform: translateY(-0.125rem); }
+
+@media (max-width: 48rem) {
+  .site-footer { display: flex !important; padding: 1rem 1.5rem; flex-direction: row; justify-content: space-between; }
+  .site-footer .footer-col.col-center { display: none; }
+  .social-profiles { gap: 1rem; }
+}
+
+
+.social-icon {
+  color: var(--text-main);
+  display: inline-flex;
+  /* Smoothly transition both the transform position and the vector icon color fill together */
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), 
+              color 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Base structural transformation anchor */
+.social-icon:hover {
+  transform: translateY(-0.125rem);
+}
+
+/* --- THE COLOR RECOVERY ENGINE --- */
+
+/* Behance Brand Blue Accent */
+.icon-behance:hover {
+  color: #0057ff;
+}
+
+/* Dribbble Brand Premium Pink Accent */
+.icon-dribbble:hover {
+  color: #ea4c89;
+}
+
+/* GitHub Brand Dark Indigo/Purple Accent */
+.icon-github:hover {
+  color: #24292e; /* Classic deep GitHub dark */
+  /* Alternative vibrant purple if you prefer: color: #6f42c1; */
+}
