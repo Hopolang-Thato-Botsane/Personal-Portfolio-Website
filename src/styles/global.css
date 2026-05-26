@@ -21,9 +21,31 @@ body {
   overflow: hidden; 
 }
 
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .site-wrapper {
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   position: relative;
-  overflow: hidden;
+}
+
+.hero-section,
+.projects-display-grid,
+.contact-display-grid {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  box-sizing: border-box;
 }
