@@ -1,0 +1,278 @@
+/* ==========================================================================
+   1. SYSTEM RESET & CORE EMBEDDED FONTS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Syne:wght@700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0B0C;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. PERSISTENT HEADS-UP DISPLAY (HUD FRAME)
+   ========================================================================== */
+.hud-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+    pointer-events: none; /* Allows natural interaction with page layers behind it */
+}
+
+.brand {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    pointer-events: auto;
+}
+
+.contact-btn {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    pointer-events: auto;
+    transition: opacity 0.2s ease;
+}
+
+.contact-btn:hover {
+    opacity: 0.6;
+}
+
+.hud-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.location-tag {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+    letter-spacing: 0.02em;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    pointer-events: auto;
+}
+
+.social-links a {
+    color: #FFFFFF;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   3. GLOBAL CANVAS & VIEWPORT LAYOUT CHANNELS
+   ========================================================================== */
+.scroll-canvas {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewport-screen {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 40px; /* Safeguards layout text from bleeding into fixed navs */
+}
+
+/* SCREEN 1: TYPOGRAPHIC IDENTITY HERO STAGE */
+.hero-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: -20px; /* Slight optical lift adjustment */
+}
+
+.identity-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+
+.main-statement {
+    font-family: 'Syne', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+}
+
+/* SCREEN 2: METRIC CASE STUDIES ROW MESH */
+.case-studies-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 120px; /* Massive headroom clearance for the header overlay */
+}
+
+.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 48px;
+}
+
+/* ==========================================================================
+   4. EDITORIAL CARDS 2-COLUMN GRID ENGINE
+   ========================================================================== */
+.projects-editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Big structural panels per row */
+    column-gap: 40px;
+    row-gap: 64px; /* Crisp vertical spacing layout breaks */
+    width: 100%;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-image-canvas {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #161617;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.card-image-canvas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .card-image-canvas img {
+    transform: scale(1.02); /* Clean, premium cinematic scale pop on hover */
+}
+
+.project-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+}
+
+.project-categories {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.4;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 24px;
+}
+
+.project-links a {
+    color: #FFFFFF;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+}
+
+.project-links a:hover {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   5. DYNAMIC RESPONSIVE LIQUID OVERRIDES
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+    .hud-nav, .hud-footer, .viewport-screen {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Collapse grid gracefully on tablet boundaries to protect card scaling */
+    .projects-editorial-grid {
+        grid-template-columns: 1fr;
+        row-gap: 48px;
+    }
+
+    .main-statement {
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hud-nav, .hud-footer {
+        height: 64px;
+    }
+
+    .viewport-screen {
+        padding: 64px 20px;
+    }
+
+    .main-statement {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    /* Stack links cleanly on compact smartphone screen viewports */
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
