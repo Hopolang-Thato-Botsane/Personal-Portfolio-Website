@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. SYSTEM RESET & CORE EMBEDDED FONTS
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Syne:wght@700;800&display=swap');
 
 * {
@@ -18,9 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   2. PERSISTENT HEADS-UP DISPLAY (HUD FRAME)
-   ========================================================================== */
 .hud-nav {
     position: fixed;
     top: 0;
@@ -32,7 +26,7 @@ body {
     align-items: center;
     padding: 0 40px;
     z-index: 100;
-    pointer-events: none; /* Allows natural interaction with page layers behind it */
+    pointer-events: none;
 }
 
 .brand {
@@ -94,9 +88,6 @@ body {
     opacity: 0.5;
 }
 
-/* ==========================================================================
-   3. GLOBAL CANVAS & VIEWPORT LAYOUT CHANNELS
-   ========================================================================== */
 .scroll-canvas {
     width: 100vw;
     display: flex;
@@ -107,10 +98,9 @@ body {
     width: 100vw;
     min-height: 100vh;
     position: relative;
-    padding: 80px 40px; /* Safeguards layout text from bleeding into fixed navs */
+    padding: 80px 40px;
 }
 
-/* SCREEN 1: TYPOGRAPHIC IDENTITY HERO STAGE */
 .hero-center {
     display: flex;
     align-items: center;
@@ -121,7 +111,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-top: -20px; /* Slight optical lift adjustment */
+    margin-top: -20px; 
 }
 
 .identity-block {
@@ -146,12 +136,11 @@ body {
     letter-spacing: -0.02em;
 }
 
-/* SCREEN 2: METRIC CASE STUDIES ROW MESH */
 .case-studies-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 120px; /* Massive headroom clearance for the header overlay */
+    padding-top: 120px;
 }
 
 .section-title {
@@ -162,14 +151,11 @@ body {
     margin-bottom: 48px;
 }
 
-/* ==========================================================================
-   4. EDITORIAL CARDS 2-COLUMN GRID ENGINE
-   ========================================================================== */
 .projects-editorial-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Big structural panels per row */
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
-    row-gap: 64px; /* Crisp vertical spacing layout breaks */
+    row-gap: 64px;
     width: 100%;
 }
 
@@ -195,7 +181,7 @@ body {
 }
 
 .project-card:hover .card-image-canvas img {
-    transform: scale(1.02); /* Clean, premium cinematic scale pop on hover */
+    transform: scale(1.02);
 }
 
 .project-name {
@@ -232,16 +218,12 @@ body {
     opacity: 1;
 }
 
-/* ==========================================================================
-   5. DYNAMIC RESPONSIVE LIQUID OVERRIDES
-   ========================================================================== */
 @media screen and (max-width: 991px) {
     .hud-nav, .hud-footer, .viewport-screen {
         padding-left: 24px;
         padding-right: 24px;
     }
 
-    /* Collapse grid gracefully on tablet boundaries to protect card scaling */
     .projects-editorial-grid {
         grid-template-columns: 1fr;
         row-gap: 48px;
@@ -270,7 +252,6 @@ body {
         margin-bottom: 32px;
     }
 
-    /* Stack links cleanly on compact smartphone screen viewports */
     .project-links {
         flex-direction: column;
         gap: 10px;
