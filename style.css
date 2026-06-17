@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. SYSTEM RESET & CORE EMBEDDED FONTS
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Syne:wght@700;800&display=swap');
 
 * {
@@ -15,6 +18,9 @@ body {
     overflow-x: hidden;
 }
 
+/* ==========================================================================
+   2. PERSISTENT HEADS-UP DISPLAY (HUD FRAME)
+   ========================================================================== */
 .hud-nav {
     position: fixed;
     top: 0;
@@ -26,7 +32,7 @@ body {
     align-items: center;
     padding: 0 40px;
     z-index: 100;
-    pointer-events: none;
+    pointer-events: none; /* Let clicks pass through empty spaces */
 }
 
 .brand {
@@ -88,10 +94,14 @@ body {
     opacity: 0.5;
 }
 
+/* ==========================================================================
+   3. SCROLL CANVAS & ANIMATED OVERLAY TRACKS
+   ========================================================================== */
 .scroll-canvas {
     width: 100vw;
     display: flex;
     flex-direction: column;
+    background-color: #0B0B0C;
 }
 
 .viewport-screen {
@@ -101,17 +111,24 @@ body {
     padding: 80px 40px;
 }
 
+/* SCREEN 1: LOCKED HERO LAYOUT LAYER */
 .hero-center {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
+    /* Native Sticky Stacking configuration */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1; /* Sits underneath the project grid */
 }
 
 .hero-text-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-top: -20px; 
+    margin-top: -20px;
 }
 
 .identity-block {
@@ -136,11 +153,18 @@ body {
     letter-spacing: -0.02em;
 }
 
+/* SCREEN 2: SCROLL-OVER CASE STUDIES COVER PANEL */
 .case-studies-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 120px;
+    
+    /* Elevates layer context to cascade smoothly over top of the hero text */
+    position: relative;
+    z-index: 2; 
+    background-color: #0B0B0C; 
+    box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.6);
 }
 
 .section-title {
@@ -151,6 +175,9 @@ body {
     margin-bottom: 48px;
 }
 
+/* ==========================================================================
+   4. EDITORIAL CARDS 2-COLUMN GRID ENGINE
+   ========================================================================== */
 .projects-editorial-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -218,6 +245,9 @@ body {
     opacity: 1;
 }
 
+/* ==========================================================================
+   5. DYNAMIC RESPONSIVE LIQUID OVERRIDES
+   ========================================================================== */
 @media screen and (max-width: 991px) {
     .hud-nav, .hud-footer, .viewport-screen {
         padding-left: 24px;
@@ -241,6 +271,11 @@ body {
 
     .viewport-screen {
         padding: 64px 20px;
+    }
+
+    /* Keep the overlay effect working perfectly on mobile bounds */
+    .hero-center {
+        height: 100vh;
     }
 
     .main-statement {
