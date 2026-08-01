@@ -1,0 +1,52 @@
+.hero-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  padding: 0 3.5rem;
+  z-index: 1;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 650px;
+}
+
+.role-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.role-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.role-title {
+  font-size: clamp(3.5rem, 7.5vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 2rem;
+  }
+  
+  .role-title {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+}
