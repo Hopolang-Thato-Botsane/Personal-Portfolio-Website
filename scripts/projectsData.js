@@ -1,36 +1,36 @@
 const projectsData = [
   {
     title: "Studio & Set",
-    tags: ["NEXT JS", "SANITY CMS"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    tags: ["NEXT JS", "Vercel"],
+    description: "Studio & Set is a specialized e-commerce platform built for film production professionals requiring high-performance camera, grip, and lighting gear. Built with Next.js, TypeScript, and custom CSS Modules, the application pairs an industrial design system with dynamic catalog filtering and a seamless dual-state drawer for product inspection and basket management.",
     links: {
-      live: "#",
-      design: "#",
-      code: "#"
+      live: "https://studio-set.vercel.app/",
+      design: "https://www.behance.net/gallery/252901249/Studio-SetUpdate-In-Progress",
+      code: "https://github.com/Hopolang-Thato-Botsane/Studio-Set"
     },
-    image: ""
+    image: "public/studio-and-set.jpg"
   },
   {
     title: "Pefect Finish",
     tags: ["HTML", "SANITY CMS"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    description: "A high-fidelity digital platform built for premium automotive detailing, featuring a dynamic pricing matrix and an interactive dual-stepper booking engine. Engineered using a lightweight, native web stack (HTML, CSS, Vanilla JS) integrated with a headless Sanity CMS backend via direct GROQ API queries. Built to eliminate pricing friction and deliver seamless, real-time service configuration without framework overhead.",
     links: {
-      live: "#",
-      design: "#",
-      code: "#"
+      live: "https://hopolang-thato-botsane.github.io/Perfect-Finish-Detailing/",
+      design: "https://www.behance.net/gallery/252046599/Perfect-Finish-Detailing",
+      code: "https://github.com/Hopolang-Thato-Botsane/Perfect-Finish-Detailing"
     },
-    image: ""
+    image: "public/perfect-finish.jpg"
   },
   {
     title: "Solar & Secure",
     tags: ["HTML", "SANITY CMS"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    description: "A high-fidelity digital platform built for autonomous energy infrastructure, featuring an interactive system ignition sequence and a dynamic spec-driven service matrix. Engineered using a lightweight, native web stack (HTML, CSS, Vanilla JS) integrated with a headless Sanity CMS backend via direct GROQ API queries. Built to eliminate procurement friction and deliver seamless, real-time technical service configuration without framework overhead.",
     links: {
-      live: "#",
-      design: "#",
-      code: "#"
+      live: "https://hopolang-thato-botsane.github.io/Solar-Security/",
+      design: "https://www.behance.net/gallery/254040693/Solar-And-Secure",
+      code: "https://github.com/Hopolang-Thato-Botsane/Solar-Security"
     },
-    image: ""
+    image: "public/solar-and-secure.jpg"
   }
 ];
 
