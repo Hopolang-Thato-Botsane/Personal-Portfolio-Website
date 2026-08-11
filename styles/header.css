@@ -20,13 +20,13 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #0d0d0d;
+  color: #ffffff;
 }
 
 .nav-link {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0d0d0d;
+  color: #ffffff;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
