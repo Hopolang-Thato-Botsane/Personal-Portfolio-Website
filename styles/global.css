@@ -5,10 +5,11 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   height: 100%;
   background-color: #0d0d0d;
+  overflow-y: scroll;
 }
 
 body {
@@ -17,15 +18,10 @@ body {
   background-color: #0d0d0d;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 main {
   width: 100%;
   position: relative;
-}
-
-.hero-section,
-.project-section {
-  scroll-snap-align: start;
 }
