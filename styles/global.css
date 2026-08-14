@@ -5,23 +5,28 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   height: 100%;
   background-color: #0d0d0d;
-  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
   background-color: #0d0d0d;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 main {
   width: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
+  background-color: #0d0d0d;
 }

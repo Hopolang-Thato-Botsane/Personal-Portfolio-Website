@@ -6,8 +6,9 @@
   width: 100%;
   background-color: #0d0d0d;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 3.5rem;
+  padding: 0 2rem;
   z-index: 1;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -17,39 +18,33 @@
 .hero-main {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 650px;
-}
-
-.role-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.role-label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  opacity: 0.75;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  max-width: 620px;
 }
 
 .role-title {
-  font-size: clamp(3.5rem, 7.5vw, 6.5rem);
-  font-weight: 700;
-  line-height: 0.95;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: -0.03em;
   color: #ffffff;
 }
 
+.hero-description {
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  line-height: 1.55;
+  color: #cccccc;
+  font-weight: 400;
+}
+
 @media (max-width: 768px) {
   .hero-section {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
   
   .role-title {
-    font-size: clamp(3rem, 12vw, 4.5rem);
+    font-size: clamp(2.5rem, 10vw, 4rem);
   }
 }

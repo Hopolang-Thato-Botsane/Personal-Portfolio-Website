@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THB — Designer & Developer</title>
+  <title>THB — Design Engineer</title>
   <link rel="stylesheet" href="styles/global.css" />
   <link rel="stylesheet" href="styles/header.css" />
-  <link rel="stylesheet" href="styles/footer.css" />
   <link rel="stylesheet" href="styles/hero.css" />
   <link rel="stylesheet" href="styles/project.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
   <script src="scripts/projectsData.js" defer></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -16,31 +16,41 @@
 
   <header class="fixed-header">
     <span class="brand">THB</span>
-    <a href="mailto:your.email@example.com" class="nav-link">Contact</a>
+    <a href="#contact" class="nav-link">Contact</a>
   </header>
 
-  <footer class="fixed-footer">
-    <span class="location">Soweto/Gauteng</span>
-    <div class="socials">
-      <a href="https://www.behance.net/thatohopolangbotsane" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-      <a href="https://github.com/Hopolang-Thato-Botsane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
-    </div>
-  </footer>
-
   <main>
+    <!-- Centered Hero -->
     <section class="hero-section">
       <div class="hero-main">
-        <div class="role-group">
-          <span class="role-label">UI/UX</span>
-          <h1 class="role-title">Designer</h1>
-        </div>
-        <div class="role-group">
-          <span class="role-label">Advanced Front-End</span>
-          <h2 class="role-title">Developer</h2>
-        </div>
+        <h1 class="role-title">Design Engineer</h1>
+        <p class="hero-description">
+          Flawless visual hierarchy meets rock-solid frontend architecture. I bridge the gap between design and engineering so you never have to trade aesthetics for performance.
+        </p>
       </div>
     </section>
 
+    <!-- Dynamic Projects will inject HERE -->
+
+    <!-- Centered Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-content">
+        <h2 class="contact-title">Let’s Build</h2>
+        <p class="contact-description">
+          Whether you're engineering a platform from scratch or upgrading an existing product, let's map out the build. Reach out to discuss technical requirements, timelines, or available roles.
+        </p>
+        <a href="mailto:your.email@example.com" class="contact-btn">Get In Touch</a>
+      </div>
+
+      <!-- Anchored Corner Elements -->
+      <div class="contact-footer-bar">
+        <span class="location">Soweto/Gauteng</span>
+        <div class="socials">
+          <a href="https://www.behance.net/thatohopolangbotsane" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
+          <a href="https://github.com/Hopolang-Thato-Botsane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>

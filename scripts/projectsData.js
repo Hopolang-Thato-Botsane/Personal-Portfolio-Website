@@ -40,23 +40,48 @@ const projectsData = [
       mobile: "public/mobile-solar.jpg",
       desktop: "public/desktop-solar.jpg"
     }
+  },
+  {
+    title: "Moyagobo Tours",
+    tags: ["FRAMER", "FIGMA"],
+    description: "A dedicated digital experience engineered for a premier hotel and resort shuttle service. Designed and structured with custom interactions, seamless booking pathways, and a responsive luxury aesthetic built to connect guests directly to partner destinations.",
+    links: {
+      live: "https://moyagobotours.framer.website/",
+      design: "https://www.behance.net/gallery/254000000/Moyagobo-Tours"
+    },
+    images: {
+      mobile: "public/mobile-moyagobo.jpg",
+      desktop: "public/desktop-moyagobo.jpg"
+    }
   }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const mainContainer = document.querySelector("main");
+  const contactSection = document.querySelector(".contact-section");
 
-  if (!mainContainer) return;
+  if (!contactSection) return;
 
   const projectsMarkup = projectsData.map((project, index) => {
     const tagsHTML = project.tags
       .map(tag => `<span class="tag">${tag}</span>`)
       .join("");
 
+    const liveLink = project.links.live 
+      ? `<a href="${project.links.live}" target="_blank" rel="noopener noreferrer" class="action-link">01 / Live Beta</a>` 
+      : "";
+      
+    const designLink = project.links.design 
+      ? `<a href="${project.links.design}" target="_blank" rel="noopener noreferrer" class="action-link">02 / Design Process</a>` 
+      : "";
+
+    const codeLink = project.links.code 
+      ? `<a href="${project.links.code}" target="_blank" rel="noopener noreferrer" class="action-link">03 / Code Architecture</a>` 
+      : "";
+
     return `
       <section 
         class="project-section project-${index + 1}" 
-        style="--bg-mobile: url('../${project.images.mobile}');"
+        style="--bg-mobile: url('../${project.images.mobile}'); z-index: ${index + 2};"
       >
         <div class="project-content">
           <div class="tech-tags">
@@ -67,9 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ${project.description}
           </p>
           <div class="project-actions">
-            <a href="${project.links.live}" target="_blank" rel="noopener noreferrer" class="action-link">01 / Live Beta</a>
-            <a href="${project.links.design}" target="_blank" rel="noopener noreferrer" class="action-link">02 / Design Process</a>
-            <a href="${project.links.code}" target="_blank" rel="noopener noreferrer" class="action-link">03 / Code Architecture</a>
+            ${liveLink}
+            ${designLink}
+            ${codeLink}
           </div>
         </div>
         <div class="project-media">
@@ -79,5 +104,5 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }).join("");
 
-  mainContainer.insertAdjacentHTML("beforeend", projectsMarkup);
+  contactSection.insertAdjacentHTML("beforebegin", projectsMarkup);
 });
