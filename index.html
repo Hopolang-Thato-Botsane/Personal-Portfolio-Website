@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles/hero.css" />
   <link rel="stylesheet" href="styles/project.css" />
   <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
   <script src="scripts/projectsData.js" defer></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -52,6 +53,16 @@
       </div>
     </section>
   </main>
+
+  <!-- Slide-over Presentation Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="case-study-modal" id="caseStudyModal">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Dynamic case study content renders here -->
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
