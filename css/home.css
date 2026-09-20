@@ -1,0 +1,219 @@
+:root {
+  --pill-bg: rgba(255, 255, 255, 0.15);
+  --pill-hover-bg: #ff3b30;
+  --pill-hover-text: #ffffff;
+  --text-dark: #ffffff;
+}
+
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none !important;
+}
+
+.top-bar, 
+.side-dock, 
+.bottom-bar {
+  position: fixed;
+  z-index: 100;
+  pointer-events: auto !important;
+}
+
+.profile-pill *, 
+.dock-btn *,
+.hud-pill * {
+  pointer-events: none !important;
+}
+
+.top-bar {
+  top: 24px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.system-status {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark, #ffffff);
+}
+
+.profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--pill-bg, rgba(255, 255, 255, 0.15));
+  padding: 6px 6px 6px 18px;
+  border-radius: 40px;
+  color: var(--text-dark, #ffffff);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.profile-pill:hover {
+  background-color: var(--pill-hover-bg, #ff3b30) !important;
+  color: var(--pill-hover-text, #ffffff) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 59, 48, 0.4);
+}
+
+.profile-pill:active {
+  transform: translateY(0px) scale(0.97);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-location {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.profile-avatar-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2a3847;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.side-dock {
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--pill-bg, rgba(255, 255, 255, 0.15));
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.dock-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark, #ffffff);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.dock-btn:hover {
+  background-color: var(--pill-hover-bg, #ff3b30) !important;
+  color: var(--pill-hover-text, #ffffff) !important;
+  transform: scale(1.12);
+  box-shadow: 0 4px 14px rgba(255, 59, 48, 0.4);
+}
+
+.dock-btn:active {
+  transform: scale(0.95);
+}
+
+.dock-btn.active {
+  background-color: var(--pill-hover-bg, #ff3b30);
+  color: var(--pill-hover-text, #ffffff);
+  box-shadow: 0 4px 14px rgba(255, 59, 48, 0.3);
+}
+
+.dock-btn.active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background-color: var(--pill-hover-bg, #ff3b30);
+  border-radius: 2px;
+}
+
+.hero-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 100px;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 650px;
+  pointer-events: auto;
+}
+
+.tags-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-text {
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.bottom-bar {
+  bottom: 32px;
+  right: 32px;
+}
+
+.hud-pill {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--pill-hover-bg, #ff3b30);
+  color: var(--pill-hover-text, #ffffff);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hud-pill .divider {
+  opacity: 0.5;
+}
+
+.hud-item i {
+  margin-right: 6px;
+}
