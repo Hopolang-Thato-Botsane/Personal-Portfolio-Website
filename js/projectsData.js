@@ -47,11 +47,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       },
       {
         title: "Mobile Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       }
     ],
     finalSection: {
@@ -105,11 +105,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       },
       {
         title: "Mobile Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       }
     ],
     finalSection: {
@@ -166,11 +166,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       },
       {
         title: "Mobile Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       }
     ],
     finalSection: {
@@ -227,11 +227,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       },
       {
         title: "Mobile Prototype",
-        embedUrl: "" // Add Figma embed URL here
+        embedUrl: ""
       }
     ],
     finalSection: {

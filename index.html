@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thato Botsane — Design Engineer</title>
+  
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/projects-grid.css">
+  <link rel="stylesheet" href="css/project.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -28,23 +31,23 @@
     </div>
   </header>
 
-  <nav class="side-dock">
-    <a href="index.html" class="dock-btn active" title="Home"><i class="fa-solid fa-house"></i></a>
-    <a href="projects.html" class="dock-btn" title="Projects"><i class="fa-solid fa-briefcase"></i></a>
-    <a href="#contact" class="dock-btn" title="Contact"><i class="fa-solid fa-link"></i></a>
-  </nav>
-
-  <main class="hero-container">
-    <div class="hero-content">
-      <div class="tags-row">
-        <span>Interactive Design</span>
-        <span class="dot">•</span>
-        <span>Front-End Architecture</span>
+  <main class="viewport-main">
+    <section class="hero-container">
+      <div class="hero-content">
+        <div class="tags-row">
+          <span>Interactive Design</span>
+          <span class="dot">•</span>
+          <span>Front-End Architecture</span>
+        </div>
+        <h1 class="hero-text">
+          High-fidelity interface design meets modular front-end code. Deepening my engineering foundation in C# to bridge the gap between complex UI systems and robust application backends.
+        </h1>
       </div>
-      <h1 class="hero-text">
-        High-fidelity interface design meets modular front-end code. Deepening my engineering foundation in C# to bridge the gap between complex UI systems and robust application backends.
-      </h1>
-    </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="projects-grid"></div>
+    </section>
   </main>
 
   <footer class="bottom-bar">
@@ -111,7 +114,10 @@
     </div>
   </div>
 
+  <div class="project-detail-view" aria-hidden="true"></div>
+
   <script src="js/canvas.js"></script>
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/projectsRenderer.js"></script>
 </body>
 </html>
