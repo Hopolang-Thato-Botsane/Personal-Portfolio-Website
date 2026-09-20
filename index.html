@@ -1,68 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THB — Design Engineer</title>
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/header.css" />
-  <link rel="stylesheet" href="styles/hero.css" />
-  <link rel="stylesheet" href="styles/project.css" />
-  <link rel="stylesheet" href="styles/contact.css" />
-  <link rel="stylesheet" href="styles/modal.css" />
-  <script src="scripts/projectsData.js" defer></script>
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thato Botsane — Design Engineer</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/projects-grid.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="fixed-header">
-    <span class="brand">THB</span>
-    <a href="#contact" class="nav-link">Contact</a>
+  <canvas id="particleCanvas"></canvas>
+
+  <header class="top-bar">
+    <div class="system-status">
+      <span class="battery-icon"><i class="fa-solid fa-battery-full"></i> 100%</span>
+      <span class="wifi-icon"><i class="fa-solid fa-wifi"></i> Speed</span>
+    </div>
+    
+    <div class="profile-pill" id="profilePillBtn" role="button" tabindex="0">
+      <div class="profile-info">
+        <span class="profile-name">Thato Botsane</span>
+        <span class="profile-location">Soweto, ZA</span>
+      </div>
+      <div class="profile-avatar-placeholder">TB</div>
+    </div>
   </header>
 
-  <main>
-    <!-- Centered Hero -->
-    <section class="hero-section">
-      <div class="hero-main">
-        <h1 class="role-title">Design Engineer</h1>
-        <p class="hero-description">
-          Flawless visual hierarchy meets rock-solid frontend architecture. I bridge the gap between design and engineering so you never have to trade aesthetics for performance.
-        </p>
+  <main class="viewport-main">
+    <section class="hero-container">
+      <div class="hero-content">
+        <div class="tags-row">
+          <span>Interactive Design</span>
+          <span class="dot">•</span>
+          <span>Front-End Architecture</span>
+        </div>
+        <h1 class="hero-text">
+          High-fidelity interface design meets modular front-end code. Deepening my engineering foundation in C# to bridge the gap between complex UI systems and robust application backends.
+        </h1>
       </div>
     </section>
 
-    <!-- Dynamic Projects will inject HERE -->
+    <section class="projects-section" id="projects">
+      <div class="projects-grid"></div>
+    </section>
 
-    <!-- Centered Contact Section -->
     <section class="contact-section" id="contact">
-      <div class="contact-content">
-        <h2 class="contact-title">Let’s Build</h2>
-        <p class="contact-description">
-          Whether you're engineering a platform from scratch or upgrading an existing product, let's map out the build. Reach out to discuss technical requirements, timelines, or available roles.
-        </p>
-        <a href="mailto:your.email@example.com" class="contact-btn">Get In Touch</a>
-      </div>
-
-      <!-- Anchored Corner Elements -->
-      <div class="contact-footer-bar">
-        <span class="location">Soweto/Gauteng</span>
-        <div class="socials">
-          <a href="https://www.behance.net/thatohopolangbotsane" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-          <a href="https://github.com/Hopolang-Thato-Botsane" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+      <div class="contact-container">
+        
+        <div class="avatar-ring-wrapper" id="contactAvatarBtn" role="button" tabindex="0" aria-label="Open Profile Modal">
+          <div class="avatar-ring"></div>
+          <img src="assets/profile.jpg" alt="Thato Botsane" class="avatar-img" />
         </div>
+
+        <div class="recruit-actions">
+          <button class="recruit-btn btn-mission" id="btnRecruitMission">
+            <span class="btn-primary-text">Recruit For Mission</span>
+            <span class="btn-sub-text">Project / Contract</span>
+          </button>
+          
+          <button class="recruit-btn btn-campaign" id="btnRecruitCampaign">
+            <span class="btn-primary-text">Recruit For Campaign</span>
+            <span class="btn-sub-text">Join Team / Full-time</span>
+          </button>
+        </div>
+
       </div>
     </section>
   </main>
 
-  <!-- Slide-over Presentation Modal -->
-  <div class="modal-backdrop" id="modalBackdrop">
-    <div class="case-study-modal" id="caseStudyModal">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
-      <div class="modal-content" id="modalContent">
-        <!-- Dynamic case study content renders here -->
+  <footer class="bottom-bar">
+    <div class="hud-pill">
+      <span class="hud-item"><i class="fa-solid fa-computer-mouse"></i> Scroll</span>
+      <span class="divider">|</span>
+      <span class="hud-item"><i class="fa-solid fa-location-arrow"></i> Hover/Interact</span>
+      <span class="divider">|</span>
+      <span class="hud-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Details</span>
+    </div>
+  </footer>
+
+  <div class="profile-modal-overlay" id="profileModalOverlay">
+    <div class="profile-modal-drawer">
+      
+      <div class="modal-header-media">
+        <button class="modal-close-btn" id="modalCloseBtn">Close</button>
+
+        <div class="status-badge-pill" id="statusBadgePill">
+          <span class="status-dot"></span>
+          <span class="status-text">Ready to join Team</span>
+        </div>
       </div>
+
+      <div class="modal-body-content">
+        <div class="profile-title-group">
+          <h2 class="modal-name">Thato Hopolang Botsane</h2>
+          <p class="modal-subtext">Soweto, Gauteng, ZA • Design Engineer (UI/UX + Front-End)</p>
+        </div>
+
+        <hr class="modal-divider" />
+
+        <section class="modal-section">
+          <h3>1. Core Capabilities Matrix</h3>
+          <ul>
+            <li><strong>Design Systems & UX:</strong> Figma, Interactive Prototyping, Visual Hierarchy, Component Systems, Micro-Interactions.</li>
+            <li><strong>Front-End Architecture:</strong> HTML5, Modern CSS / Modules, JavaScript (ES6+), React, Framer, Sanity CMS (GROQ).</li>
+            <li><strong>Engineering Expansion (Learning):</strong> C# / Object-Oriented Logic, REST APIs, Git Architecture.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>2. Operating Philosophy</h3>
+          <ul>
+            <li><strong>Bridge the Gap:</strong> Design with production-ready code constraints in mind so visual fidelity is never lost in translation.</li>
+            <li><strong>Performance First:</strong> Prioritize native, lightweight CSS/JS execution over heavy framework overhead and bloated dependencies.</li>
+            <li><strong>Systemic Thinking:</strong> Build reusable, modular component architectures that scale easily across platforms.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>3. Connect / Repository</h3>
+          <div class="modal-cta-group">
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn-cta btn-dark">
+              <i class="fa-brands fa-github"></i> Visit
+            </a>
+            <a href="mailto:thato@example.com" class="btn-cta btn-dark">
+              <i class="fa-solid fa-envelope"></i> Mail Me
+            </a>
+          </div>
+        </section>
+      </div>
+
     </div>
   </div>
 
+  <div class="project-detail-view" aria-hidden="true"></div>
+
+  <script src="js/canvas.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/projectsRenderer.js"></script>
 </body>
 </html>
