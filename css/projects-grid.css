@@ -172,7 +172,6 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   }
 
-  /* Dark bottom vignette over image to make text pop */
   .project-card-image-wrapper::after {
     content: '';
     position: absolute;

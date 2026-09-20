@@ -38,7 +38,8 @@ html, body {
 }
 
 .hero-container,
-.projects-section {
+.projects-section,
+.contact-section {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: start;

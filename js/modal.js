@@ -1,5 +1,9 @@
 export function initModal() {
   const profilePillBtn = document.getElementById('profilePillBtn');
+  const contactAvatarBtn = document.getElementById('contactAvatarBtn');
+  const btnRecruitMission = document.getElementById('btnRecruitMission');
+  const btnRecruitCampaign = document.getElementById('btnRecruitCampaign');
+  
   const profileModalOverlay = document.getElementById('profileModalOverlay');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
   const statusBadgePill = document.getElementById('statusBadgePill');
@@ -17,6 +21,9 @@ export function initModal() {
   };
 
   if (profilePillBtn) profilePillBtn.addEventListener('click', openModal);
+  if (contactAvatarBtn) contactAvatarBtn.addEventListener('click', openModal);
+  if (btnRecruitMission) btnRecruitMission.addEventListener('click', openModal);
+  if (btnRecruitCampaign) btnRecruitCampaign.addEventListener('click', openModal);
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
 
   profileModalOverlay.addEventListener('click', (e) => {
@@ -32,8 +39,8 @@ export function initModal() {
   if (statusBadgePill) {
     const statusText = statusBadgePill.querySelector('.status-text');
     if (statusText) {
-      statusBadgePill.addEventListener('mouseleave', () => {
-        statusText.textContent = 'Ready to join Team';
+      statusBadgePill.addEventListener('mouseenter', () => {
+        statusText.textContent = 'Available for Hire';
       });
       statusBadgePill.addEventListener('mouseleave', () => {
         statusText.textContent = 'Ready to join Team';
