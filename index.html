@@ -6,6 +6,7 @@
   <title>Thato Botsane — Design Engineer</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
       <span class="wifi-icon"><i class="fa-solid fa-wifi"></i> Speed</span>
     </div>
     
-    <div class="profile-pill">
+    <div class="profile-pill" id="profilePillBtn" role="button" tabindex="0">
       <div class="profile-info">
         <span class="profile-name">Thato Botsane</span>
         <span class="profile-location">Soweto, ZA</span>
@@ -56,7 +57,61 @@
     </div>
   </footer>
 
+  <div class="profile-modal-overlay" id="profileModalOverlay">
+    <div class="profile-modal-drawer">
+      
+      <div class="modal-header-media">
+        <button class="modal-close-btn" id="modalCloseBtn">Close</button>
+
+        <div class="status-badge-pill" id="statusBadgePill">
+          <span class="status-dot"></span>
+          <span class="status-text">Ready to join Team</span>
+        </div>
+      </div>
+
+      <div class="modal-body-content">
+        <div class="profile-title-group">
+          <h2 class="modal-name">Thato Hopolang Botsane</h2>
+          <p class="modal-subtext">Soweto, Gauteng, ZA • Design Engineer (UI/UX + Front-End)</p>
+        </div>
+
+        <hr class="modal-divider" />
+
+        <section class="modal-section">
+          <h3>1. Core Capabilities Matrix</h3>
+          <ul>
+            <li><strong>Design Systems & UX:</strong> Figma, Interactive Prototyping, Visual Hierarchy, Component Systems, Micro-Interactions.</li>
+            <li><strong>Front-End Architecture:</strong> HTML5, Modern CSS / Modules, JavaScript (ES6+), React, Framer, Sanity CMS (GROQ).</li>
+            <li><strong>Engineering Expansion (Learning):</strong> C# / Object-Oriented Logic, REST APIs, Git Architecture.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>2. Operating Philosophy</h3>
+          <ul>
+            <li><strong>Bridge the Gap:</strong> Design with production-ready code constraints in mind so visual fidelity is never lost in translation.</li>
+            <li><strong>Performance First:</strong> Prioritize native, lightweight CSS/JS execution over heavy framework overhead and bloated dependencies.</li>
+            <li><strong>Systemic Thinking:</strong> Build reusable, modular component architectures that scale easily across platforms.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>3. Connect / Repository</h3>
+          <div class="modal-cta-group">
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn-cta btn-dark">
+              <i class="fa-brands fa-github"></i> Visit
+            </a>
+            <a href="mailto:thato@example.com" class="btn-cta btn-dark">
+              <i class="fa-solid fa-envelope"></i> Mail Me
+            </a>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
   <script src="js/canvas.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

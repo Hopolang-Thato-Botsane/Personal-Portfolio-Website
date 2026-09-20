@@ -1,0 +1,240 @@
+.profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile-modal-drawer {
+  width: 50vw;
+  max-width: 680px;
+  min-width: 380px;
+  height: 100vh;
+  background: #2a3847;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.profile-modal-overlay.active .profile-modal-drawer {
+  transform: translateX(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.modal-close-btn:hover {
+  background: #ff3b30;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.modal-header-media {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-color: #2a3847;
+  background-image: url('../assets/profile-photo.jpg');
+  background-size: cover;
+  background-position: center top;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.status-badge-pill {
+  width: calc(100% - 48px);
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.status-badge-pill:hover {
+  background: #ff3b30;
+}
+
+.status-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #34c759;
+  flex-shrink: 0;
+  transition: background-color 0.25s ease;
+}
+
+.status-text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.modal-body-content {
+  position: relative;
+  z-index: 20;
+  background: #ffffff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 36px 32px 48px;
+  color: #1a1a1a;
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.15);
+  margin-top: -24px;
+}
+
+.profile-title-group .modal-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111111;
+}
+
+.profile-title-group .modal-subtext {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 500;
+}
+
+.modal-divider {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 20px 0 24px;
+}
+
+.modal-section {
+  margin-bottom: 24px;
+}
+
+.modal-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111111;
+}
+
+.modal-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-section li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.modal-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #888888;
+}
+
+.modal-section li strong {
+  color: #111111;
+}
+
+.modal-cta-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-dark {
+  background: #111111;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #ff3b30;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .profile-modal-drawer {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-modal-overlay {
+    align-items: flex-end;
+  }
+
+  .profile-modal-drawer {
+    width: 100vw;
+    min-width: 100%;
+    height: 90vh;
+    border-radius: 24px 24px 0 0;
+    transform: translateY(100%);
+  }
+
+  .profile-modal-overlay.active .profile-modal-drawer {
+    transform: translateY(0);
+  }
+
+  .modal-header-media {
+    height: 70vh;
+  }
+}
