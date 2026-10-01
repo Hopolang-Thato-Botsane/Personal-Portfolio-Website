@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thato Botsane — Design Engineer</title>
   
+  <link rel="stylesheet" href="css/overlay.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/modal.css">
@@ -15,7 +16,40 @@
 </head>
 <body>
 
-  <canvas id="particleCanvas"></canvas>
+  <canvas id="particleCanvas" style="position: fixed; inset: 0; z-index: 10000; pointer-events: none;"></canvas>
+
+  <div class="ps5-overlay" id="ps5Overlay">
+    <div class="ps5-header">
+      <h1 class="ps5-title">Welcome to Thato Botsane's profile</h1>
+      <p class="ps5-subtitle">which front are you interested in?</p>
+    </div>
+
+    <div class="ps5-profiles-grid">
+      <button class="ps5-card" id="selectFrontendProfile" aria-label="Select UI/UX & Front-end Profile">
+        <div class="ps5-avatar-ring">
+          <div class="ps5-avatar-inner">
+            <img src="assets/profile-image.png" alt="UI/UX & Front-end Profile" />
+          </div>
+        </div>
+        <div class="ps5-label-group">
+          <span class="ps5-role-name">UI/UX & Front-end</span>
+          <span class="ps5-status-tag ps5-status-available">(Available)</span>
+        </div>
+      </button>
+
+      <button class="ps5-card disabled" disabled aria-label="C# & .NET Profile - Coming Soon">
+        <div class="ps5-avatar-ring">
+          <div class="ps5-avatar-inner">
+            <i class="fa-solid fa-code ps5-icon-fallback"></i>
+          </div>
+        </div>
+        <div class="ps5-label-group">
+          <span class="ps5-role-name">C# & .NET</span>
+          <span class="ps5-status-tag ps5-status-locked">(Coming soon)</span>
+        </div>
+      </button>
+    </div>
+  </div>
 
   <header class="top-bar">
     <div class="system-status">
@@ -28,7 +62,6 @@
         <span class="profile-name">Thato Botsane</span>
         <span class="profile-location">Soweto, ZA</span>
       </div>
-
       <div class="profile-avatar-placeholder">
         <img src="assets/profile-image.png" alt="Thato Botsane" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
       </div>
@@ -128,10 +161,10 @@
         <section class="modal-section">
           <h3>3. Connect / Repository</h3>
           <div class="modal-cta-group">
-            <a href="https://github.com" target="_blank" rel="noopener" class="btn-cta btn-dark">
+            <a href="https://github.com/Hopolang-Thato-Botsane" target="_blank" rel="noopener" class="btn-cta btn-dark">
               <i class="fa-brands fa-github"></i> Visit
             </a>
-            <a href="mailto:thato@example.com" class="btn-cta btn-dark">
+            <a href="mailto:botsanethatoo37@gmail.com" class="btn-cta btn-dark">
               <i class="fa-solid fa-envelope"></i> Mail Me
             </a>
           </div>
@@ -142,6 +175,31 @@
   </div>
 
   <div class="project-detail-view" aria-hidden="true"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ps5Overlay = document.getElementById('ps5Overlay');
+      const selectFrontendBtn = document.getElementById('selectFrontendProfile');
+      const particleCanvas = document.getElementById('particleCanvas');
+      const mainContentElements = document.querySelectorAll('.top-bar, .viewport-main, .bottom-bar');
+      mainContentElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.5s ease';
+      });
+
+      selectFrontendBtn.addEventListener('click', () => {
+        ps5Overlay.classList.add('hidden');
+
+        if (particleCanvas) {
+          particleCanvas.style.zIndex = '0';
+        }
+
+        mainContentElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      });
+    });
+  </script>
 
   <script src="js/canvas.js"></script>
   <script type="module" src="js/main.js"></script>

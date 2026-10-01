@@ -1,0 +1,137 @@
+.ps5-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: radial-gradient(circle at 50% 30%, #1e2638 0%, #0c1017 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.ps5-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.ps5-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    z-index: 10001;
+}
+
+.ps5-title {
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.5rem 0;
+    color: #f0f4f8;
+}
+
+.ps5-subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin: 0;
+    font-weight: 400;
+}
+
+.ps5-profiles-grid {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+}
+
+.ps5-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    group: relative;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ps5-avatar-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 6px;
+    border: 2px solid transparent;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+}
+
+.ps5-card:hover .ps5-avatar-ring,
+.ps5-card:focus-visible .ps5-avatar-ring {
+    border-color: #38bdf8;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+}
+
+.ps5-avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps5-avatar-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ps5-icon-fallback {
+    font-size: 2.5rem;
+    color: #64748b;
+}
+
+.ps5-label-group {
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.ps5-role-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.ps5-status-tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.ps5-status-available {
+    color: #4ade80;
+}
+
+.ps5-status-locked {
+    color: #94a3b8;
+}
+
+.ps5-card.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.ps5-card.disabled:hover .ps5-avatar-ring {
+    border-color: transparent;
+    transform: none;
+    box-shadow: none;
+}
