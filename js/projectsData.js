@@ -2,14 +2,14 @@ export const projectsData = [
   {
     id: "perfect-finish",
     title: "Perfect Finish",
-    projectUrl: "",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Perfect-Finish-Detailing/",
     year: "2026",
     status: "Complete",
-    version: "1.6",
-    heroImage: "assets/projects/placeholder.jpg",
+    version: "2.6",
+    heroImage: "assets/projects/perfect-finish-hero.jpg",
     meta: {
       role: "Design Engineer",
-      timeline: "3 Weeks",
+      timeline: "1 Month",
       team: "Solo",
       platform: "HTML / Sanity"
     },
@@ -63,14 +63,14 @@ export const projectsData = [
   {
     id: "studio-and-set",
     title: "Studio & Set",
-    projectUrl: "",
+    projectUrl: "https://studio-set.vercel.app/",
     year: "2026",
     status: "Ongoing",
-    version: "2.0",
-    heroImage: "assets/projects/studio-hero.jpg",
+    version: "4.0",
+    heroImage: "assets/projects/studio-and-set-hero.jpg",
     meta: {
       role: "Design Engineer",
-      timeline: "4 Months",
+      timeline: "3 Months",
       team: "Solo",
       platform: "Next JS"
     },
@@ -122,7 +122,7 @@ export const projectsData = [
   {
     id: "voyant",
     title: "Voyant",
-    projectUrl: "",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Voyant/",
     year: "2026",
     status: "Complete",
     version: "1.1",
@@ -184,11 +184,11 @@ export const projectsData = [
   {
     id: "solar-and-secure",
     title: "Solar & Secure",
-    projectUrl: "",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Solar-Security/",
     year: "2026",
     status: "In Progress",
-    version: "1.0",
-    heroImage: "assets/projects/solar-hero.jpg",
+    version: "0.9",
+    heroImage: "assets/projects/solar-and-secure-hero.jpg",
     meta: {
       role: "Design Engineer",
       timeline: "3 Weeks",
