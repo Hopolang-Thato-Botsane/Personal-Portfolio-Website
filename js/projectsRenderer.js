@@ -65,7 +65,6 @@ class ProjectsRenderer {
     imgElement.style.viewTransitionName = 'active-project-hero';
 
     const transition = document.startViewTransition(() => {
-
       imgElement.style.viewTransitionName = '';
  
       this.renderDetailContent(project);
@@ -203,6 +202,19 @@ class ProjectsRenderer {
           <h2 class="section-heading">${project.finalSection.heading}</h2>
           <p class="section-body">${project.finalSection.body}</p>
         </section>
+
+        <!-- Dynamic Action Button -->
+        <div class="project-action-wrapper">
+          ${project.projectUrl ? `
+            <a href="${project.projectUrl}" target="_blank" rel="noopener noreferrer" class="project-launch-btn">
+              Launch Application
+            </a>
+          ` : `
+            <button class="project-launch-btn disabled" disabled>
+              Application Ready
+            </button>
+          `}
+        </div>
 
       </div>
     `;

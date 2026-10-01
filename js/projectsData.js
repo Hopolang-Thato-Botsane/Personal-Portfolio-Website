@@ -2,13 +2,14 @@ export const projectsData = [
   {
     id: "perfect-finish",
     title: "Perfect Finish",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Perfect-Finish-Detailing/",
     year: "2026",
     status: "Complete",
-    version: "1.0",
-    heroImage: "assets/projects/pfd-hero.jpg",
+    version: "2.6",
+    heroImage: "assets/projects/perfect-finish-hero.jpg",
     meta: {
       role: "Design Engineer",
-      timeline: "3 Weeks",
+      timeline: "1 Month",
       team: "Solo",
       platform: "HTML / Sanity"
     },
@@ -47,11 +48,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/sM0e5JM4jMWHRH3hplmuAH/Portfolio-Website?node-id=169-545&starting-point-node-id=169%3A545&embed-host=share" `
       },
       {
         title: "Mobile Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/sbUdPZl547P8Ti9qFAx8c5/Perfect-Finish?node-id=494-1002&viewport=-162%2C254%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=494%3A1002&page-id=0%3A1&embed-host=share"`,
       }
     ],
     finalSection: {
@@ -62,13 +63,14 @@ export const projectsData = [
   {
     id: "studio-and-set",
     title: "Studio & Set",
+    projectUrl: "https://studio-set.vercel.app/",
     year: "2026",
     status: "Ongoing",
-    version: "1.4",
-    heroImage: "assets/projects/studio-hero.jpg",
+    version: "4.0",
+    heroImage: "assets/projects/studio-and-set-hero.jpg",
     meta: {
       role: "Design Engineer",
-      timeline: "2 Months",
+      timeline: "3 Months",
       team: "Solo",
       platform: "Next JS"
     },
@@ -105,11 +107,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/sbUdPZl547P8Ti9qFAx8c5/Perfect-Finish?node-id=695-712&viewport=104%2C45%2C0.11&scaling=scale-down&content-scaling=fixed&page-id=695%3A619&embed-host=share"`
       },
       {
         title: "Mobile Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/sbUdPZl547P8Ti9qFAx8c5/Perfect-Finish?node-id=695-712&viewport=104%2C45%2C0.11&scaling=scale-down&content-scaling=fixed&page-id=695%3A619&embed-host=share"`
       }
     ],
     finalSection: {
@@ -120,9 +122,10 @@ export const projectsData = [
   {
     id: "voyant",
     title: "Voyant",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Voyant/",
     year: "2026",
     status: "Complete",
-    version: "1.0",
+    version: "1.1",
     heroImage: "assets/projects/voyant-hero.jpg",
     meta: {
       role: "Design Engineer",
@@ -166,11 +169,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/1O6HQ0D0aTJP2y7h5LgcHb/Voyant?node-id=1113-1595&viewport=517%2C341%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A1595&page-id=596%3A874&embed-host=share"`
       },
       {
         title: "Mobile Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/1O6HQ0D0aTJP2y7h5LgcHb/Voyant?page-id=1040%3A1566&node-id=1118-3012&viewport=520%2C142%2C0.09&scaling=scale-down&content-scaling=fixed&embed-host=share"`
       }
     ],
     finalSection: {
@@ -181,10 +184,11 @@ export const projectsData = [
   {
     id: "solar-and-secure",
     title: "Solar & Secure",
+    projectUrl: "https://hopolang-thato-botsane.github.io/Solar-Security/",
     year: "2026",
     status: "In Progress",
-    version: "1.0",
-    heroImage: "assets/projects/solar-hero.jpg",
+    version: "0.9",
+    heroImage: "assets/projects/solar-and-secure-hero.jpg",
     meta: {
       role: "Design Engineer",
       timeline: "3 Weeks",
@@ -227,11 +231,11 @@ export const projectsData = [
     prototypes: [
       {
         title: "Desktop Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/zYUHjyFk5MAVUH1Z2L2qiY/Solar---Security?node-id=713-2497&p=f&viewport=5687%2C2769%2C0.56&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share"`
       },
       {
         title: "Mobile Prototype",
-        embedUrl: ""
+        embedUrl: `https://embed.figma.com/proto/zYUHjyFk5MAVUH1Z2L2qiY/Solar---Security?node-id=755-1332&p=f&viewport=45%2C169%2C0.33&scaling=scale-down&content-scaling=fixed&page-id=755%3A1297&embed-host=share"`
       }
     ],
     finalSection: {
