@@ -248,6 +248,41 @@ body {
   padding: 20px;
 }
 
+.project-action-wrapper {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+.project-launch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.project-launch-btn:hover:not(.disabled) {
+  background-color: #222222;
+}
+
+.project-launch-btn.disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+  background-color: #111111;
+  color: #e0e0e0;
+}
+
 @media (max-width: 768px) {
   .project-meta-grid {
     grid-template-columns: repeat(2, 1fr);
