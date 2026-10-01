@@ -182,3 +182,59 @@ html, body {
   justify-content: center;
   padding-bottom: 110px;
 }
+
+@media (max-width: 768px) {
+  .top-bar {
+    top: 16px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .bottom-bar {
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: max-content;
+  }
+
+  .hud-pill {
+    padding: 8px 16px;
+    font-size: 11px;
+    gap: 10px;
+  }
+
+  .hero-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .tags-row {
+    font-size: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .profile-pill {
+    padding: 4px 4px 4px 12px;
+  }
+
+  .profile-name {
+    font-size: 12px;
+  }
+
+  .profile-location {
+    font-size: 10px;
+  }
+
+  .system-status {
+    font-size: 12px;
+    gap: 10px;
+  }
+}
