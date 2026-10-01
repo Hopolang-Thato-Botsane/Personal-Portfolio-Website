@@ -67,7 +67,7 @@
   height: 100vh;
   min-height: 500px;
   background-color: #2a3847;
-  background-image: url('../assets/profile-photo.jpg');
+  background-image: url('../assets/profile-image.png');
   background-size: cover;
   background-position: center top;
   flex-shrink: 0;
