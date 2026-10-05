@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #000000;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="background-color: #000000; color: #ffffff; margin: 0; padding: 0; overflow: hidden; width: 100vw; height: 100vh;">
 
-  <canvas id="particleCanvas" style="position: fixed; inset: 0; z-index: 10000; pointer-events: none;"></canvas>
+  <canvas id="particleCanvas" style="position: fixed; inset: 0; z-index: 10000; pointer-events: none; background-color: transparent;"></canvas>
 
-  <div class="ps5-overlay" id="ps5Overlay">
+  <div class="ps5-overlay" id="ps5Overlay" style="background: #000000;">
     <div class="ps5-header">
       <h1 class="ps5-title">Welcome to Thato Botsane's profile</h1>
       <p class="ps5-subtitle">which front are you interested in?</p>
@@ -182,6 +182,7 @@
       const selectFrontendBtn = document.getElementById('selectFrontendProfile');
       const particleCanvas = document.getElementById('particleCanvas');
       const mainContentElements = document.querySelectorAll('.top-bar, .viewport-main, .bottom-bar');
+      
       mainContentElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transition = 'opacity 0.5s ease';
