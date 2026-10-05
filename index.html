@@ -1,109 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THB — Designer & Developer</title>
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/header.css" />
-  <link rel="stylesheet" href="styles/footer.css" />
-  <link rel="stylesheet" href="styles/hero.css" />
-  <link rel="stylesheet" href="styles/project.css" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thato Botsane — Design Engineer</title>
+  
+  <link rel="stylesheet" href="css/overlay.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/projects-grid.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="fixed-header">
-    <span class="brand">THB</span>
-    <a href="#contact" class="nav-link">Contact</a>
+  <canvas id="particleCanvas" style="position: fixed; inset: 0; z-index: 10000; pointer-events: none;"></canvas>
+
+  <div class="ps5-overlay" id="ps5Overlay">
+    <div class="ps5-header">
+      <h1 class="ps5-title">Welcome to Thato Botsane's profile</h1>
+      <p class="ps5-subtitle">which front are you interested in?</p>
+    </div>
+
+    <div class="ps5-profiles-grid">
+      <button class="ps5-card" id="selectFrontendProfile" aria-label="Select UI/UX & Front-end Profile">
+        <div class="ps5-avatar-ring">
+          <div class="ps5-avatar-inner">
+            <img src="assets/profile-image.png" alt="UI/UX & Front-end Profile" />
+          </div>
+        </div>
+        <div class="ps5-label-group">
+          <span class="ps5-role-name">UI/UX & Front-end</span>
+          <span class="ps5-status-tag ps5-status-available">(Available)</span>
+        </div>
+      </button>
+
+      <button class="ps5-card disabled" disabled aria-label="C# & .NET Profile - Coming Soon">
+        <div class="ps5-avatar-ring">
+          <div class="ps5-avatar-inner">
+            <i class="fa-solid fa-code ps5-icon-fallback"></i>
+          </div>
+        </div>
+        <div class="ps5-label-group">
+          <span class="ps5-role-name">C# & .NET</span>
+          <span class="ps5-status-tag ps5-status-locked">(Coming soon)</span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <header class="top-bar">
+    <div class="system-status">
+      <span class="battery-icon"><i class="fa-solid fa-battery-full"></i> 100%</span>
+      <span class="wifi-icon"><i class="fa-solid fa-wifi"></i> Speed</span>
+    </div>
+    
+    <div class="profile-pill" id="profilePillBtn" role="button" tabindex="0">
+      <div class="profile-info">
+        <span class="profile-name">Thato Botsane</span>
+        <span class="profile-location">Soweto, ZA</span>
+      </div>
+      <div class="profile-avatar-placeholder">
+        <img src="assets/profile-image.png" alt="Thato Botsane" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+      </div>
+    </div>
   </header>
 
-  <footer class="fixed-footer">
-    <span class="location">Soweto/Gauteng</span>
-    <div class="socials">
-      <a href="#" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-      <a href="#" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+  <main class="viewport-main">
+    <section class="hero-container">
+      <div class="hero-content">
+        <div class="tags-row">
+          <span>Interactive Design</span>
+          <span class="dot">•</span>
+          <span>Front-End Architecture</span>
+        </div>
+        <h1 class="hero-text">
+          High-fidelity interface design meets modular front-end code. Deepening my engineering foundation in C# to bridge the gap between complex UI systems and robust application backends.
+        </h1>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="projects-grid"></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        
+        <div class="avatar-ring-wrapper" id="contactAvatarBtn" role="button" tabindex="0" aria-label="Open Profile Modal">
+          <div class="avatar-ring"></div>
+          <img src="assets/profile-image.png" alt="Thato Botsane" class="avatar-img" />
+        </div>
+
+        <div class="recruit-actions">
+          <button class="recruit-btn btn-mission" id="btnRecruitMission">
+            <span class="btn-primary-text">Recruit For Mission</span>
+            <span class="btn-sub-text">Project / Contract</span>
+          </button>
+          
+          <button class="recruit-btn btn-campaign" id="btnRecruitCampaign">
+            <span class="btn-primary-text">Recruit For Campaign</span>
+            <span class="btn-sub-text">Join Team / Full-time</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom-bar">
+    <div class="hud-pill">
+      <span class="hud-item"><i class="fa-solid fa-computer-mouse"></i> Scroll</span>
+      <span class="divider">|</span>
+      <span class="hud-item"><i class="fa-solid fa-location-arrow"></i> Hover/Interact</span>
+      <span class="divider">|</span>
+      <span class="hud-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Details</span>
     </div>
   </footer>
 
-  <main>
+  <div class="profile-modal-overlay" id="profileModalOverlay">
+    <div class="profile-modal-drawer">
+      
+      <div class="modal-header-media">
+        <button class="modal-close-btn" id="modalCloseBtn">Close</button>
 
-    <section class="hero-section">
-      <div class="hero-main">
-        <div class="role-group">
-          <span class="role-label">UI/UX</span>
-          <h1 class="role-title">Designer</h1>
-        </div>
-        <div class="role-group">
-          <span class="role-label">Advanced Front-End</span>
-          <h2 class="role-title">Developer</h2>
+        <div class="status-badge-pill" id="statusBadgePill">
+          <span class="status-dot"></span>
+          <span class="status-text">Ready to join Team</span>
         </div>
       </div>
-    </section>
 
-    <section class="project-section project-1">
-      <div class="project-content">
-        <div class="tech-tags">
-          <span class="tag">NEXT JS</span>
-          <span class="tag">SANITY CMS</span>
+      <div class="modal-body-content">
+        <div class="profile-title-group">
+          <h2 class="modal-name">Thato Hopolang Botsane</h2>
+          <p class="modal-subtext">Soweto, Gauteng, ZA • Design Engineer (UI/UX + Front-End)</p>
         </div>
-        <h2 class="project-title">Studio & Set</h2>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <div class="project-actions">
-          <a href="#" class="action-link">01 / Live Beta</a>
-          <a href="#" class="action-link">02 / Design Process</a>
-          <a href="#" class="action-link">03 / Code Architecture</a>
-        </div>
-      </div>
-      <div class="project-media">
 
-      </div>
-    </section>
+        <hr class="modal-divider" />
 
-    <section class="project-section project-2">
-      <div class="project-content">
-        <div class="tech-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">SANITY CMS</span>
-        </div>
-        <h2 class="project-title">Pefect Finish</h2>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <div class="project-actions">
-          <a href="#" class="action-link">01 / Live Beta</a>
-          <a href="#" class="action-link">02 / Design Process</a>
-          <a href="#" class="action-link">03 / Code Architecture</a>
-        </div>
-      </div>
-      <div class="project-media">
-      </div>
-    </section>
+        <section class="modal-section">
+          <h3>1. Core Capabilities Matrix</h3>
+          <ul>
+            <li><strong>Design Systems & UX:</strong> Figma, Interactive Prototyping, Visual Hierarchy, Component Systems, Micro-Interactions.</li>
+            <li><strong>Front-End Architecture:</strong> HTML5, Modern CSS / Modules, JavaScript (ES6+), React, Framer, Sanity CMS (GROQ).</li>
+            <li><strong>Engineering Expansion (Learning):</strong> C# / Object-Oriented Logic, REST APIs, Git Architecture.</li>
+          </ul>
+        </section>
 
-    <section class="project-section project-3">
-      <div class="project-content">
-        <div class="tech-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">SANITY CMS</span>
-        </div>
-        <h2 class="project-title">Solar & Secure</h2>
-        <p class="project-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <div class="project-actions">
-          <a href="#" class="action-link">01 / Live Beta</a>
-          <a href="#" class="action-link">02 / Design Process</a>
-          <a href="#" class="action-link">03 / Code Architecture</a>
-        </div>
+        <section class="modal-section">
+          <h3>2. Operating Philosophy</h3>
+          <ul>
+            <li><strong>Bridge the Gap:</strong> Design with production-ready code constraints in mind so visual fidelity is never lost in translation.</li>
+            <li><strong>Performance First:</strong> Prioritize native, lightweight CSS/JS execution over heavy framework overhead and bloated dependencies.</li>
+            <li><strong>Systemic Thinking:</strong> Build reusable, modular component architectures that scale easily across platforms.</li>
+          </ul>
+        </section>
+
+        <section class="modal-section">
+          <h3>3. Connect / Repository</h3>
+          <div class="modal-cta-group">
+            <a href="https://github.com/Hopolang-Thato-Botsane" target="_blank" rel="noopener" class="btn-cta btn-dark">
+              <i class="fa-brands fa-github"></i> Visit
+            </a>
+            <a href="mailto:botsanethatoo37@gmail.com" class="btn-cta btn-dark">
+              <i class="fa-solid fa-envelope"></i> Mail Me
+            </a>
+          </div>
+        </section>
       </div>
-      <div class="project-media">
 
-      </div>
-    </section>
+    </div>
+  </div>
 
-  </main>
+  <div class="project-detail-view" aria-hidden="true"></div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ps5Overlay = document.getElementById('ps5Overlay');
+      const selectFrontendBtn = document.getElementById('selectFrontendProfile');
+      const particleCanvas = document.getElementById('particleCanvas');
+      const mainContentElements = document.querySelectorAll('.top-bar, .viewport-main, .bottom-bar');
+      mainContentElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.5s ease';
+      });
+
+      selectFrontendBtn.addEventListener('click', () => {
+        ps5Overlay.classList.add('hidden');
+
+        if (particleCanvas) {
+          particleCanvas.style.zIndex = '0';
+        }
+
+        mainContentElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      });
+    });
+  </script>
+
+  <script src="js/canvas.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/projectsRenderer.js"></script>
 </body>
 </html>
